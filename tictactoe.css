@@ -1,0 +1,44 @@
+.bg {
+    background-color: #f85a9148 !important;
+    height: 450px;
+    width: 100%;
+}
+
+.header-text {
+    max-width: 400px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    margin-top: 10px;
+}
+
+.circle,
+.line1,
+.line2,
+.line3,
+footer,
+nav ul li::after {
+    background: #f85a92 !important;
+}
+
+#video-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#video-section .col-md-6 {
+    padding: 60px 50px;
+}
+
+#video-section h3 {
+    margin: 20px auto;
+}
+
+#video-section img {
+    width: 505px;
+    height: 280px;
+}
+
+.container {
+    margin-right: 80px;
+    margin-left: 80px;
+}

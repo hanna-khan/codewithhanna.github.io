@@ -1,0 +1,863 @@
+                            @import url('utilities.css');
+                            @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+                            @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Ubuntu+Condensed&display=swap');
+                            @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@200;400&family=Ubuntu+Condensed&display=swap');
+                            /* CSS FOR ALL */
+                            
+                            * {
+                                padding: 0;
+                                margin: 0;
+                                text-decoration: none;
+                                list-style-type: none;
+                                outline: none;
+                                box-sizing: border-box;
+                                font-family: 'Poppins', sans-serif !important;
+                            }
+                            /* UTILITIES */
+                            
+                            .flex {
+                                display: flex;
+                            }
+                            
+                            .flex1 {
+                                flex: 1;
+                            }
+                            /* A TAGS */
+                            
+                            a {
+                                cursor: pointer;
+                                text-decoration: none;
+                                color: #000 !important;
+                            }
+                            /* ROOT ELEMENT */
+                            
+                             :root {
+                                --primary: #007fc3;
+                                --dark: #000;
+                                --pure: #fff;
+                            }
+                            /* BODY TAG */
+                            
+                            body {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            /* H1 TAG */
+                            
+                            h1 {
+                                font-size: 45px;
+                                font-family: 'Ubuntu Condensed', sans-serif;
+                            }
+                            /* P TAGS */
+                            
+                            p {
+                                font-size: 13px;
+                                line-height: 18px;
+                                color: rgb(152, 152, 152);
+                                font-family: 'Poppins', sans-serif !important;
+                            }
+                            /* HEADER SECTION */
+                            
+                            #header {
+                                margin-top: 10px;
+                            }
+                            
+                            .header-text {
+                                max-width: 400px;
+                                padding-top: 100px;
+                                margin-right: 80px;
+                                margin-left: 80px;
+                            }
+                            
+                            .header-text .h1 {
+                                position: relative;
+                                color: #0e3742;
+                                letter-spacing: 2px;
+                                /* text-transform: uppercase; */
+                                /* text-align: center; */
+                                /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0008); */
+                                /* line-height: 0.70px; */
+                                outline: none;
+                                animation: animate 5s linear infinite;
+                            }
+                            /* BURGER */
+                            
+                            .burger {
+                                display: none;
+                                position: absolute;
+                                cursor: pointer;
+                                right: 5%;
+                                top: 15px;
+                            }
+                            
+                            .nav-line {
+                                width: 28px;
+                                background-color: #000;
+                                height: 3.5px;
+                                margin: 3px 0px;
+                            }
+                            
+                            @keyframes animate {
+                                0%,
+                                18%,
+                                20%,
+                                50.1%,
+                                60%,
+                                65.1%,
+                                80%,
+                                90.1%,
+                                92% {
+                                    color: #035d8d;
+                                    /* text-shadow: none; */
+                                }
+                                18.1%,
+                                20.1%,
+                                30%,
+                                50%,
+                                60.1%,
+                                65%,
+                                80.1%,
+                                90%,
+                                92.1%,
+                                100% {
+                                    color: #007fc3;
+                                    /* text-shadow: 0 0 0 10px #03bcf4, 0 0 0 20px #03bcf4, 0 0 0 40px #03bcf4, 0 0 0 80px #03bcf4, 0 0 0 100px #03bcf4, */
+                                }
+                            }
+                            
+                            .bkg img {
+                                background-position: center;
+                                background-size: cover;
+                                float: right;
+                                width: 600px;
+                                height: 500px;
+                                max-width: 100%;
+                                object-fit: contain;
+                            }
+                            
+                            .common-btn {
+                                padding: 18px 40px;
+                                background: transparent;
+                                outline: none;
+                                border: 2px solid var(--primary);
+                                font-weight: bold;
+                                cursor: pointer;
+                            }
+                            
+                            .header-text button {
+                                margin-top: 20px;
+                                margin-bottom: 16px;
+                            }
+                            
+                            .circle {
+                                height: 22px;
+                                width: 22px;
+                                display: inline-block;
+                                background: var(--primary);
+                                margin: 15px 0;
+                                border-radius: 50%;
+                            }
+                            
+                            .line1 {
+                                width: 22px;
+                                height: 22px;
+                                background: var(--primary);
+                                display: inline-block;
+                                border-radius: 50%;
+                            }
+                            
+                            .line2 {
+                                width: 80px;
+                                height: 1px;
+                                background: var(--primary);
+                                display: inline-block;
+                            }
+                            
+                            .line3 {
+                                width: 60px;
+                                height: 1px;
+                                background: var(--primary);
+                                display: inline-block;
+                            }
+                            
+                            .line {
+                                line-height: 8px;
+                            }
+                            /* NAVIGATION STARTS HERE */
+                            
+                            nav {
+                                margin-top: 15px;
+                            }
+                            
+                            nav ul {
+                                display: flex;
+                            }
+                            
+                            nav ul li {
+                                flex-direction: row;
+                                padding-left: 30px;
+                            }
+                            
+                            nav ul li a {
+                                text-decoration: none;
+                                color: rgb(0, 0, 0);
+                                font-size: 15px;
+                                font-family: 'Ubuntu Condensed', sans-serif;
+                            }
+                            
+                            nav ul li::after {
+                                content: "";
+                                width: 0;
+                                height: 2px;
+                                background: var(--primary);
+                                display: block;
+                                margin: auto;
+                                transition: 0.5s;
+                            }
+                            
+                            nav ul li:hover::after {
+                                width: 100%;
+                            }
+                            /* NAVIGATION STARTS ENDS HERE */
+                            /* VIDEO STARTS HERE */
+                            
+                            .video {
+                                width: 80%;
+                                margin: auto;
+                                text-align: center;
+                                margin-top: 100px;
+                            }
+                            
+                            .video-column {
+                                flex-basis: 32%;
+                                border-radius: 10px;
+                                margin-bottom: 30px;
+                                position: relative;
+                                overflow: hidden;
+                            }
+                            
+                            .video .row {
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                margin-top: 50px;
+                            }
+                            
+                            .video-column img {
+                                width: 100%;
+                                display: block;
+                                height: 100%;
+                                cursor: pointer;
+                            }
+                            
+                            .video-column h3 {
+                                text-align: center;
+                                color: var(--dark);
+                                font-size: 2rem;
+                                position: absolute;
+                                top: 105px;
+                                padding-left: 80px;
+                            }
+                            
+                            .layer {
+                                background: transparent;
+                                height: 100%;
+                                width: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                cursor: pointer;
+                                transition: 0.5s;
+                            }
+                            
+                            .layer:hover {
+                                background: #f82e3f71;
+                            }
+                            
+                            .layer h3 {
+                                width: 100%;
+                                font-weight: 500;
+                                color: #fff;
+                                font-size: 26px;
+                                bottom: 0;
+                                left: 35%;
+                                transform: translateX(-50%);
+                                position: absolute;
+                                opacity: 0;
+                                transition: 0.5s;
+                            }
+                            
+                            .layer:hover h3 {
+                                bottom: 49%;
+                                opacity: 1;
+                            }
+                            /* ICON */
+                            
+                            .icon {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 80px;
+                                height: 60px;
+                                cursor: pointer;
+                            }
+                            
+                            .arrow {
+                                position: absolute;
+                                top: 25px;
+                                width: 90%;
+                                height: 10px;
+                                background-color: var(--dark);
+                                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+                                animation: arrow 700ms linear infinite;
+                            }
+                            
+                            .arrow::after,
+                            .arrow::before {
+                                content: '';
+                                position: absolute;
+                                width: 60%;
+                                height: 10px;
+                                right: -8px;
+                                background-color: var(--dark);
+                            }
+                            
+                            .arrow::after {
+                                top: -12px;
+                                transform: rotate(45deg);
+                            }
+                            
+                            .arrow::before {
+                                top: 12px;
+                                transform: rotate(-45deg);
+                                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+                            }
+                            
+                            .content__item {
+                                width: 100%;
+                                height: 100%;
+                                margin: 0;
+                                padding: 0;
+                                counter-increment: itemcounter;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+                                z-index: 1;
+                                pointer-events: none;
+                            }
+                            /* VIDEO ENDS HERE */
+                            /* OUR CHANNEL STARTS HERE */
+                            
+                            section.channel {
+                                width: 100%;
+                                margin: auto;
+                                display: block;
+                                text-align: center;
+                                height: 300px;
+                                margin-top: 100px;
+                            }
+                            
+                            .channel .col h1 {
+                                font-size: 45px;
+                            }
+                            
+                            section.channel .row {
+                                justify-content: space-between;
+                                display: flex;
+                                padding-top: -100px;
+                            }
+                            
+                            section.channel img {
+                                width: 150%;
+                                height: 100%;
+                            }
+                            
+                            section.channel small {
+                                color: #9c1618;
+                                font-size: 12px;
+                                font-weight: 400;
+                                letter-spacing: 3px;
+                            }
+                            
+                            .col {
+                                flex-basis: 48%;
+                            }
+                            
+                            .col div {
+                                align-items: center;
+                            }
+                            
+                            .channel span {
+                                font-size: 18px;
+                                padding: 10px;
+                            }
+                            
+                            .channel p {
+                                font-size: 16px;
+                                line-height: 20px;
+                            }
+                            
+                            .button {
+                                pointer-events: auto;
+                                cursor: pointer;
+                                background: #e7e7e7;
+                                border: none;
+                                padding: 1.5rem 3rem;
+                                margin: 0;
+                                font-family: inherit;
+                                font-size: inherit;
+                                position: relative;
+                                display: inline-block;
+                            }
+                            
+                            .button::before,
+                            .button::after {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            
+                            .button--janus {
+                                font-family: freight-display-pro, serif;
+                                font-weight: 900;
+                                width: 175px;
+                                height: 120px;
+                                color: #fff;
+                                background: none;
+                            }
+                            
+                            .button--janus::before {
+                                content: '';
+                                background: #e6e6e6;
+                                -webkit-clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+                                clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
+                                transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), background 0.5s ease;
+                            }
+                            
+                            .button--janus:hover::before {
+                                background: #000;
+                                -webkit-clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+                                clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
+                            }
+                            
+                            .button--janus::after {
+                                content: '';
+                                height: 86%;
+                                width: 97%;
+                                top: 5%;
+                                border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+                                border: 1px solid #000;
+                                transform: rotate(-20deg);
+                                z-index: -1;
+                                transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+                            }
+                            
+                            .button--janus:hover::after {
+                                transform: translate3d(0, -5px, 0);
+                            }
+                            
+                            .button--janus span {
+                                display: block;
+                                transition: transform 0.3s ease;
+                                mix-blend-mode: difference;
+                                letter-spacing: 3px;
+                            }
+                            
+                            .button--janus:hover span {
+                                transform: translate3d(0, -10px, 0);
+                            }
+                            /* OUR CHANNEL ENDS HERE */
+                            /* CONTACT STARTS HERE */
+                            
+                            .contactus {
+                                margin-top: 100px;
+                            }
+                            
+                            .contactcol {
+                                margin: 30px 50px;
+                            }
+                            
+                            .contactcol div {
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 40px;
+                            }
+                            
+                            .contactus .container {
+                                margin: 0 20px;
+                            }
+                            
+                            .contactcol input,
+                            textarea {
+                                width: 100%;
+                                padding: 15px;
+                                margin-bottom: 17px;
+                                border: 1px solid #ccc;
+                                outline: none;
+                                box-sizing: border-box;
+                            }
+                            
+                            .contactcol img {
+                                height: 500px;
+                                width: 500px;
+                            }
+                            
+                            .comment-box {
+                                border: 1px solid #ccc;
+                                margin: 50px 0px;
+                                padding: 10px 20px;
+                            }
+                            
+                            .comment-box h3 {
+                                text-align: left;
+                            }
+                            
+                            #status {
+                                width: 90%;
+                                padding: 10px;
+                                max-width: 500px;
+                                border-radius: 8px;
+                                text-align: center;
+                                margin: 0 auto;
+                            }
+                            
+                            #status.sucess {
+                                color: rgb(0, 134, 29);
+                            }
+                            
+                            .btn {
+                                color: #ea288f;
+                                border: 1px solid #ea288f;
+                                padding: 18px 40px;
+                                background: transparent;
+                                outline: none;
+                                font-weight: bold;
+                                cursor: pointer;
+                                background-color: transparent;
+                            }
+                            
+                            .btn:hover {
+                                border: 1px solid #ea288f;
+                                background: #ea288f;
+                                transition: 1s;
+                                color: #fff;
+                            }
+                            /* CONTACT ENDS HERE */
+                            /* FOOTER STARTS HERE*/
+                            
+                            footer {
+                                background: var(--primary);
+                                height: 100%;
+                                padding: 1rem 0;
+                                text-align: center;
+                            }
+                            
+                            .copyright {
+                                color: #fff;
+                            }
+                            
+                            .copyright span {
+                                font-size: 17px;
+                            }
+                            
+                            .enlighter-t-enlighter {
+                                margin: 80px 0 !important;
+                            }
+                            
+                            iframe {
+                                margin: auto;
+                                display: block;
+                            }
+                            /* FOOTER ENDS HERE*/
+                            /* MEDIA QUERY STARTS HERE */
+                            
+                            @media screen and (max-width:1130px) {
+                                .bkg img {
+                                    width: 500px;
+                                }
+                                .header-text {
+                                    max-width: 350px;
+                                }
+                                .header-text .h1 {
+                                    font-size: 2.5rem;
+                                    letter-spacing: 0px;
+                                }
+                            }
+                            
+                            @media screen and (max-width:945px) {
+                                .bkg img {
+                                    width: 430px;
+                                }
+                                .header-text {
+                                    max-width: 300px;
+                                }
+                                .header-text .h1 {
+                                    font-size: 2rem;
+                                }
+                                .blogs-column h3 {
+                                    display: none;
+                                }
+                                section.channel img {
+                                    width: 100%;
+                                }
+                                .channel .col h1 {
+                                    font-size: 30px;
+                                }
+                                .channel p {
+                                    font-size: 16px;
+                                }
+                                .channel span {
+                                    font-size: 14px;
+                                }
+                                .contactcol img {
+                                    height: 450px;
+                                    width: 450px;
+                                }
+                                .course p {
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    padding: 2px;
+                                }
+                                .contactus .row {
+                                    display: block;
+                                }
+                                .row {
+                                    display: block !important;
+                                }
+                                #video-section .col-md-6 {
+                                    padding: 15px !important;
+                                }
+                            }
+                            
+                            @media screen and (max-width:795px) {
+                                .bkg img {
+                                    width: 400px;
+                                }
+                                .header-text {
+                                    max-width: 300px;
+                                }
+                                .header-text .h1 {
+                                    font-size: 1.5rem;
+                                }
+                                .navlist {
+                                    align-items: center;
+                                    flex-direction: row;
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                                .navbar {
+                                    padding-left: 0px;
+                                    height: 20vh;
+                                    display: flex;
+                                    transition: all 0.7s ease-out;
+                                    flex-direction: column;
+                                }
+                                .navlist ul li a {
+                                    font-size: 13px;
+                                }
+                                .burger {
+                                    display: block;
+                                }
+                                .height-nav-resp {
+                                    height: 50px;
+                                }
+                                .visibility-class-resp {
+                                    opacity: 0;
+                                }
+                                .height-nav {
+                                    height: 300px;
+                                }
+                                .contactcol input,
+                                textarea {
+                                    padding: 10px;
+                                    margin-bottom: 15px;
+                                    font-size: 13px;
+                                }
+                                .contactus .btn {
+                                    padding: 12px 20px;
+                                    font-size: 12px;
+                                }
+                                .course h3 {
+                                    font-size: 16px;
+                                }
+                                .course p {
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                    padding: 0px;
+                                }
+                            }
+                            
+                            @media screen and (max-width:685px) {
+                                .bkg img {
+                                    height: 350px;
+                                }
+                                .header-text {
+                                    max-width: 400px;
+                                    padding-top: 75px;
+                                    margin-right: 80px;
+                                    margin-left: 20px;
+                                }
+                                .header-text .h1 {
+                                    font-size: 1.2rem;
+                                }
+                                nav {
+                                    padding-left: 10px;
+                                }
+                                p {
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                }
+                                .common-btn {
+                                    padding: 8px 20px;
+                                }
+                                .channel .col h1 {
+                                    font-size: 25px;
+                                }
+                                .channel p {
+                                    font-size: 14px;
+                                }
+                                .channel span {
+                                    font-size: 12px;
+                                }
+                                .row {
+                                    margin-top: 3%;
+                                    display: block;
+                                    margin: 26px;
+                                }
+                                section.channel .row {
+                                    display: block;
+                                    line-height: 2;
+                                }
+                                .content__item {
+                                    margin: 25px 0;
+                                }
+                                iframe {
+                                    width: 350px !important;
+                                    height: 200px!important;
+                                }
+                                nav ul {
+                                    left: -25px;
+                                }
+                                nav ul li a {
+                                    font-size: 12px;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 550px) {
+                                .bkg img {
+                                    display: none;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 500px) {
+                                .bg {
+                                    height: 380px !important;
+                                }
+                                .navlist {
+                                    margin-left: -40px;
+                                }
+                                .contactcol img {
+                                    height: 260px;
+                                    width: 260px;
+                                }
+                                .navlist {
+                                    flex-direction: column;
+                                }
+                            }
+                            
+                            @media screen and (max-width: 380px) {
+                                .contactcol img {
+                                    display: none;
+                                }
+                                .course h1 {
+                                    font-size: 30px;
+                                    font-weight: 600;
+                                }
+                                h1 {
+                                    font-size: 30px;
+                                }
+                                p {
+                                    font-size: 9px;
+                                    line-height: 13px;
+                                }
+                                .header-text .h1 {
+                                    font-size: 1rem;
+                                }
+                                .circle,
+                                .line1 {
+                                    height: 15px;
+                                    width: 15px;
+                                    margin: 5px 0;
+                                }
+                                nav ul li a {
+                                    font-size: 11px;
+                                }
+                                .common-btn {
+                                    padding: 7px 10px;
+                                    font-size: 9px;
+                                }
+                                .contactus .btn {
+                                    padding: 8px 12px;
+                                    font-size: 8px;
+                                }
+                                .contactcol input,
+                                textarea {
+                                    padding: 5px;
+                                    margin-bottom: 8px;
+                                    font-size: 9px;
+                                }
+                                .copyright {
+                                    font-size: 10px;
+                                }
+                                .copyright span {
+                                    font-size: 12px;
+                                }
+                                .contactcol {
+                                    margin: 0px;
+                                }
+                                .channel .row {
+                                    margin: 0;
+                                }
+                                iframe {
+                                    width: 247px !important;
+                                    height: 147px!important;
+                                }
+                            }
+                            
+                            @media screen and (max-width:300px) {
+                                .bkg img {
+                                    display: none;
+                                }
+                                nav ul li {
+                                    padding-left: 6px;
+                                }
+                                .header-text {
+                                    display: block;
+                                }
+                                .course {
+                                    margin-top: 100px;
+                                }
+                                .course h1 {
+                                    font-size: 22px;
+                                }
+                                .course p {
+                                    font-size: 10px;
+                                    line-height: 13px;
+                                }
+                                h1 {
+                                    font-size: 25px;
+                                }
+                                .channel .col h1 {
+                                    font-size: 20px;
+                                }
+                                .channel p {
+                                    font-size: 12px;
+                                }
+                                nav ul li a {
+                                    font-size: 10px;
+                                }
+                            }
